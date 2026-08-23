@@ -23,32 +23,32 @@ Pregătiți `numele de utilizator` și `noul număr de versiune`.
 Navigați la directorul rădăcină al proiectului `xiaozhi-esp32-server` și compilați atât imaginile serverului, cât și cele web:
 
 ```bash
-cd 项目根目录
+cd directorul rădăcină al proiectului
 
-# 编译server镜像
-docker build -f Dockerfile-server -t 你的用户名/xiaozhi-esp32-server:新的版本号 .
+# Compilează imaginea serverului
+docker build -f Dockerfile-server -t numele dvs. de utilizator/xiaozhi-esp32-server:număr nou de versiune .
 
-# 编译web镜像
-docker build -f Dockerfile-web -t 你的用户名/xiaozhi-esp32-server-web:新的版本号 .
+# Compilează imaginea web
+docker build -f Dockerfile-web -t Numele dvs. de utilizator/xiaozhi-esp32-server-web:Număr nou de versiune .
 
 ```
 
-## 3、修改docker-compose配置
+## 3、Modificați configurația docker-compose
 
 ```bash
 cd main/xiaozhi-server
 ```
 
-编辑 `docker-compose_all.yml` 文件，将镜像版本替换为你刚才编译的版本：
+editati `docker-compose_all.yml` În fișier, înlocuiți versiunea imaginii cu versiunea pe care tocmai ați compilat-o：
 
 ```yaml
 services:
   xiaozhi-esp32-server:
-    image: 你的用户名/xiaozhi-esp32-server:新的版本号   # 修改为你的镜像地址
+    image: Numele dvs. de utilizator/xiaozhi-esp32-server:Număr nou de versiune   # Schimbați adresa mirror
     ...
 
   xiaozhi-esp32-server-web:
-    image: 你的用户名/xiaozhi-esp32-server-web:新的版本号   #修改为你的镜像地址
+    image: Numele dvs. de utilizator/xiaozhi-esp32-server-web:Număr nou de versiune   #Schimbați adresa mirror
     ...
 ```
 
