@@ -1,25 +1,26 @@
 # Metode pentru compilarea locală a imaginilor Docker
 
-现在本项目已经使用`github`的`自动编译docker镜像`功能，如果您拉取的是项目发行的镜像，您没有自己编译镜像的需求，那就忽略本文档。
-Acest proiect folosește acum funcția de compilare automată a imaginilor Docker de la GitHub. Dacă extrageți imaginea distribuită a proiectului și nu trebuie să o compilați singur, ignorați acest document.
-如果您修改了源码，然后想采用`docker`的方式部署运行，可以参照以下步骤操作：
+Acest proiect folosește acum funcția de compilare automată a `imaginilor Docker` de la `GitHub`. Dacă extrageți imaginea distribuită a proiectului și nu trebuie să o compilați singur, ignorați acest document.
 
-## 1、环境准备
+Dacă ați modificat codul sursă și doriți să îl implementați și să îl rulați folosind `Docker`, puteți consulta următorii pași:
 
-安装docker：
+## 1、Pregătirea pentru mediu
+
+Instalați Docker：
 ```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-## 2、编译镜像
+## 2、Compilație Imagine
 
-当你修改好代码后，需要编译新的镜像时，需要按照以下步骤操作：
+După ce ați modificat codul și trebuie să compilați o imagine nouă, trebuie să urmați acești pași.：
 
-准备好你的`你的用户名`和`新的版本号`。
-- 这个`你的用户名`是你在`docker hub`注册的用户名，例如`xiaozhi`。当然，如果你不需要推送到`docker hub`，你可以自由定义。
-- 这个`新的版本号`是你编译的镜像版本，例如`1.2.3`，你可以根据需要自定义或者使用日期格式（例如`20260609`）主要是方便和现在运行的版本号做区分，同时也方便下次回忆你是什么时候构建的，不要和现在你本机运行的版本号相同。
+Pregătiți `numele de utilizator` și `noul număr de versiune`.
 
-进入`xiaozhi-esp32-server`项目根目录，编译 server 和 web 两个镜像：
+- Acest `nume de utilizator` este numele de utilizator înregistrat pe `docker hub`, de exemplu, `xiaozhi`. Desigur, dacă nu trebuie să trimiteți date către `docker hub`, îl puteți defini liber.
+- Acest `număr de versiune nouă` este versiunea imaginii pe care ați compilat-o, cum ar fi `1.2.3`. Îl puteți personaliza după cum este necesar sau puteți utiliza un format de dată (cum ar fi `20260609`). Acest lucru este în principal pentru a-l distinge de numărul versiunii pe care o utilizați în prezent și, de asemenea, pentru a vă ajuta să vă amintiți când ați construit-o. Nu ar trebui să fie același cu numărul versiunii pe care o utilizați în prezent pe mașina dvs.
+
+Navigați la directorul rădăcină al proiectului `xiaozhi-esp32-server` și compilați atât imaginile serverului, cât și cele web:
 
 ```bash
 cd 项目根目录
