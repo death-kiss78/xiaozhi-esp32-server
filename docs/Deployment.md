@@ -1,6 +1,6 @@
-# 部署架构图
-![请参考-最简化架构图](../docs/images/deploy1.png)
-# 方式一：Docker只运行Server
+# Diagrama arhitecturii de implementare
+![Vă rugăm să consultați diagrama arhitecturală simplificată.](../docs/images/deploy1.png)
+# Metoda 1: Docker rulează doar serverul
 
 `0.8.2`版本开始，本项目发行的docker镜像只支持`x86架构`，如果需要在`arm64架构`的CPU上部署，可按照[这个教程](docker-build.md)在本机编译`arm64的镜像`。
 
