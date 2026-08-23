@@ -1,7 +1,7 @@
-# 本地编译docker镜像方法
+# Metode pentru compilarea locală a imaginilor Docker
 
 现在本项目已经使用`github`的`自动编译docker镜像`功能，如果您拉取的是项目发行的镜像，您没有自己编译镜像的需求，那就忽略本文档。
-
+Acest proiect folosește acum funcția de compilare automată a imaginilor Docker de la GitHub. Dacă extrageți imaginea distribuită a proiectului și nu trebuie să o compilați singur, ignorați acest document.
 如果您修改了源码，然后想采用`docker`的方式部署运行，可以参照以下步骤操作：
 
 ## 1、环境准备
